@@ -1,0 +1,41 @@
+{
+  "name": "create-script",
+  "version": "0.0.1",
+  "description": "Create Script return Promise",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/rohmanhm/create-script",
+  "author": {
+    "name": "Roman Masyhar",
+    "email": "mhrohman@live.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/es6-shim": "^0.31.34",
+    "@types/jest": "^19.2.4",
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.6",
+    "typescript": "^2.3.4"
+  },
+  "scripts": {
+    "test": "jest",
+    "prepublish": "tsc"
+  },
+  "jest": {
+    "verbose": true,
+    "globals": {
+      "__TS_CONFIG__": "tsconfig.json"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "./node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "**/test/**/*.test.(ts|js)"
+    ],
+    "testEnvironment": "jsdom"
+  }
+}
